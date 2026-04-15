@@ -106,7 +106,7 @@ npm start
 
 ## 📸 Screenshots
 
-![Health Dashboard Screenshot](./screenshot.png)
+![Health Dashboard Screenshot](./Health-Dashboard.png)
 
 ---
 
