@@ -106,7 +106,7 @@ npm start
 
 ## 📸 Screenshots
 
-![Health-Dashboard Screenshot](D:\Project\health-dashboard\Health-Dashboard.png)
+![Health Dashboard Screenshot](./screenshot.png)
 
 ---
 
