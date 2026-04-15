@@ -81,13 +81,13 @@ https://fedskillstest.coalitiontechnologies.workers.dev
 1. Clone the repository
 
 ```
-git clone https://github.com/YOUR_USERNAME/health-dashboard-react.git
+git clone https://github.com/debugwithsushant/health-dashboard.git
 ```
 
 2. Navigate to project folder
 
 ```
-cd health-dashboard-react
+cd health-dashboard
 ```
 
 3. Install dependencies
@@ -106,7 +106,7 @@ npm start
 
 ## 📸 Screenshots
 
-*(Add screenshots here if available)*
+![Health-Dashboard Screenshot](D:\Project\health-dashboard\Health-Dashboard.png)
 
 ---
 
