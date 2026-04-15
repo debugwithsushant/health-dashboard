@@ -1,38 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: #F6F7F8;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 12px 24px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.nav-links li { cursor: pointer; }
+
+.nav-links li.active {
+  background: #01F0D0;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-weight: 700;
+  color: #000;
+}
+
+.nav-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.nav-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-name { font-weight: 700; }
+.nav-role { color: #777; font-size: 12px; }
+
+/* ===== CONTENT WRAPPER ===== */
+.content-wrapper {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ===== APP LAYOUT FIX ===== */
 .App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 16px;
+  gap: 0;
+  background: #F6F7F8;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 260px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sidebar-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.patient-list {
+  list-style: none;
+}
+
+.patient-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 8px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.patient-item.active {
+  background: #D8FCF7;
+}
+
+.patient-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.patient-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.patient-meta {
+  font-size: 12px;
+  color: #707070;
+}
+
+.more-icon {
+  margin-left: auto;
+  color: #707070;
+  font-size: 18px;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== DIAGNOSIS HISTORY ===== */
+.diagnosis-history {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.diagnosis-history h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.chart-section {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: #F4F0FE;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.chart-wrapper {
+  flex: 1;
+}
+
+.bp-values {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bp-item p {
+  font-size: 13px;
+  color: #555;
+}
+
+.bp-item h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.bp-item span {
+  font-size: 12px;
+  color: #555;
+}
+
+.bp-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.bp-dot.systolic { background: #C26EB4; }
+.bp-dot.diastolic { background: #7B61FF; }
+
+/* ===== VITALS CARDS ===== */
+.vitals-cards {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.vital-card {
+  flex: 1;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.vital-card.blue  { background: #E0F3FA; }
+.vital-card.pink  { background: #FFE0F0; }
+.vital-card.red   { background: #FFE0E0; }
+
+.vital-card p {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.vital-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.vital-card span {
+  font-size: 12px;
+  color: #555;
+}
+
+/* ===== DIAGNOSTIC LIST ===== */
+.diagnostic-list {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.diagnostic-list h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.diagnostic-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.diagnostic-list th {
+  text-align: left;
+  padding: 10px;
+  font-size: 13px;
+  color: #555;
+  background: #F6F7F8;
+}
+
+.diagnostic-list td {
+  padding: 12px 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+/* ===== PROFILE PANEL ===== */
+.profile-panel {
+  width: 280px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  overflow-y: auto;
+  flex-shrink: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-panel h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile-details {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.detail-row {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #F0F0F0;
+  font-size: 13px;
+}
+
+.detail-row strong {
+  font-weight: 600;
+}
+
+.show-all-btn {
+  width: 100%;
+  padding: 12px;
+  background: #01F0D0;
+  border: none;
+  border-radius: 24px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* ===== LAB RESULTS ===== */
+.lab-results h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.lab-item {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 0;
+  border-bottom: 1px solid #F0F0F0;
+  font-size: 14px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.download-icon {
+  cursor: pointer;
+  color: #555;
 }
