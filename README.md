@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+# 🏥 Health Dashboard (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern and responsive **Health Monitoring Dashboard** built using **React.js**, designed based on an Adobe XD template.
+The application integrates real-time patient data via API and visualizes health metrics using interactive charts.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+* 📊 **Diagnosis History Chart**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  * Blood pressure trends using Chart.js
+* 👤 **Patient Profile Panel**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  * Displays personal and medical details
+* 📋 **Diagnostic List**
 
-### `npm test`
+  * Tabular representation of patient diagnoses
+* 🧠 **API Integration**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  * Fetches and renders real-time patient data
+* 🎯 **Focused Data Display**
 
-### `npm run build`
+  * Displays data specifically for **Jessica Taylor** (as per instructions)
+* 🧩 **Component-Based Architecture**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  * Clean and maintainable React structure
+* 📱 **Responsive Design**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  * Works across different screen sizes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* **Frontend:** React.js
+* **Styling:** CSS (Custom)
+* **Charts:** Chart.js & react-chartjs-2
+* **API:** Coalition Technologies Patient Data API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📂 Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+│
+├── components/
+│   ├── Sidebar.js
+│   ├── DiagnosisHistory.js
+│   ├── DiagnosisList.js
+│   ├── PatientProfile.js
+│
+├── App.js
+├── App.css
+├── index.js
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🔗 API Integration
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The application fetches patient data from:
 
-### Code Splitting
+```
+https://fedskillstest.coalitiontechnologies.workers.dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Uses Basic Authentication
+* Extracts and displays **Jessica Taylor's** data
+* Maps:
 
-### Analyzing the Bundle Size
+  * `diagnosis_history` → Chart
+  * `diagnostic_list` → Table
+  * `profile` → UI Panel
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## ⚙️ Installation & Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Clone the repository
 
-### Advanced Configuration
+```
+git clone https://github.com/YOUR_USERNAME/health-dashboard-react.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Navigate to project folder
 
-### Deployment
+```
+cd health-dashboard-react
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. Install dependencies
 
-### `npm run build` fails to minify
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Run the application
+
+```
+npm start
+```
+
+---
+
+## 📸 Screenshots
+
+*(Add screenshots here if available)*
+
+---
+
+## 🎯 Key Highlights
+
+* Converted Adobe XD design into a fully functional UI
+* Implemented API integration and data binding
+* Used Chart.js for dynamic visualization
+* Followed clean coding practices and modular structure
+
+---
+
+## ⚠️ Notes
+
+* Interactive features like search, dropdowns, and buttons are UI-only, as per assignment instructions
+* Focus was on UI rendering, API integration, and data visualization
+
+---
+
+## 👨‍💻 Author
+
+**Sushant Pawar**
+
+---
+
+## ⭐ Acknowledgment
+
+This project was developed as part of a frontend skills assessment.
+
+---
